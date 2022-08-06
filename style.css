@@ -48,11 +48,15 @@ main {
 }
 
 
-input, select {
+input, select  {
     padding: 10px;
     border: 1px solid black;
     border-radius: 3px;
     outline: 0;
+}
+
+option {
+    display: block;
 }
 
 input::placeholder{

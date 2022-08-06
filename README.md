@@ -27,7 +27,7 @@ Como entrar em contato:
 
 Email: gabriel.admpinho@gmail.com
 GitHub: https://github.com/Gabriel-ADM
-Telefone / WhatsApp: 61 981733270.
+Telefone / WhatsApp: <a href="https://api.whatsapp.com/send?phone=5561981733270">61 981733270</a>.
 
-Curiosidade: Demorei aproximadamente dois dias pra finalizar a aplicação, no entanto entreguei no último dia disponível para entrega pois semana q vem é a última
+Curiosidade: Demorei aproximadamente dois dias pra finalizar a aplicação, no entanto entreguei no último dia disponível para entrega pois semana que vem é a última
 semana do semestre 😬

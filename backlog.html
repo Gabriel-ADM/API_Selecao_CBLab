@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backlog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/icon.png">
+    <script src="backlog.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="img/coco-bambu_logo-header.png" alt="">
+        <h1>Tarefas a realizar </h1>
+    </header>
+    <main>
+        <div class="inputBox">
+            <h2>Tarefa:</h2>
+            <input type="text" id="inputTarefa" class="lineInput" placeholder="O que precisa ser feito?">
+            <button id="addButton" onclick="addTarefa()">Adicionar</button>
+            <button id="remvButton" onclick="remvTarefa()">Remover Tarefa Concluída</button>
+            <h4>Todas as tarefas foram concluídas?<input type="checkbox" id="todos" onclick="selectAll()"></h4>
+        </div>
+        <div id="tarefas">
+    
+        </div>
+
+    </main>
+</body>
+
+</html>

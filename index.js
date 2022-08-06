@@ -100,7 +100,7 @@ getPedido()
 
 // Função que limpa os inputs
 function cancelInput() {
-    if (confirm('Deseja cancelar o pedido?')) {
+    if (confirm('Deseja cancelar alterações?')) {
         clientNameInput.value = ''
         productNameInput.value = ''
         productValueInput.value = ''
@@ -153,8 +153,7 @@ function saveInput() {
                     lPedidos.splice(i, 1, newPedido)
                 }
             }
-            editID == null
-
+            editID = null
         } else {
             newPedido = {
                 "id": nextID,
@@ -214,7 +213,7 @@ function editPedido(id) {
                 document.getElementById('receivedInputOption').style.display = "none"
                 document.getElementById('confirmedInputOption').style.display = "none"
                 document.getElementById('dispatchedInputOption').style.display = "none"
-                document.getElementById('confirmedInputOption').style.display = "none"
+                document.getElementById('deliveredInputOption').style.display = "none"
             }
 
             window.scrollTo({

@@ -32,6 +32,16 @@ main {
     padding: 30px 50px;
 }
 
+h2,
+h4 {
+    padding-top: 7px;
+    padding-bottom: 10px;
+}
+
+h4 {
+    margin-top: 15px;
+}
+
 .inputBox {
     background-color: #46190f;
     color: white;
@@ -48,7 +58,8 @@ main {
 }
 
 
-input, select  {
+input,
+select {
     padding: 10px;
     border: 1px solid black;
     border-radius: 3px;
@@ -59,11 +70,11 @@ option {
     display: block;
 }
 
-input::placeholder{
+input::placeholder {
     color: black;
 }
 
-select{
+select {
     cursor: pointer;
 }
 
@@ -110,6 +121,14 @@ table td img {
     transition: all ease 0.3s;
 }
 
-table td img:hover{
+table td img:hover {
     background-color: #ccc;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: #e0b4a9;
 }

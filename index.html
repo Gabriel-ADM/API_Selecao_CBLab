@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coco Bambu API</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/icon.png">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="img/coco-bambu_logo-header.png" alt="">
+        <h1>API Pedidos</h1>
+    </header>
+    <main>
+        <div class="title">
+            <h3>Pedidos</h3>
+            <span>Lista de Pedidos</span>
+        </div>
+
+        <div class="inputBox">
+            <div class="lineInput">
+                <label>Cliente</label>
+                <input type="text" id="clientName" placeholder="Nome do cliente">
+            </div>
+
+            <div class="lineInput">
+                <label>Produto</label>
+                <input type="text" id="productName" placeholder="Produto do pedido">
+            </div>
+
+
+            <div class="lineInput">
+                <label>Valor</label>
+                <input type="number" id="productValue" placeholder="Valor do pedido">
+            </div>
+
+            <div class="lineInput">
+                <label>Estado</label>
+                <select name="" id="productStatus">
+                    <option value="">Estado do Pedido</option>
+                    <option value="RECEIVED">Recebido</option>
+                    <option value="CONFIRMED">Confirmado</option>
+                    <option value="DISPATCHED">Despachado</option>
+                    <option value="DELIVERED">Entregue</option>
+                    <option value="CANCELED">Cancelado</option>
+                </select>
+            </div>
+
+            <button onclick="saveInput()">Salvar</button>
+            <button onclick="cancelInput()" id="cancelButton">Cancelar</button>
+        </div>
+
+        <div class="requestsContent">
+            <table>
+                <thead class="tableHead">
+                    <th>ID</th>
+                    <th class="textLeft">Cliente</th>
+                    <th class="textLeft">Produto</th>
+                    <th>Valor</th>
+                    <th>Estado</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+    <a href="https://www.flaticon.com/free-icons/edit" title="edit icons">Icons found at Flaticon</a>
+</body>
+
+</html>

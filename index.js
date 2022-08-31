@@ -8,6 +8,7 @@ let productValue
 let productStatus
 let timeStamp
 let sent
+let msg = ''
 let newPedido
 let i
 
@@ -99,18 +100,24 @@ const getPedido = async (pedidos) => {
 getPedido()
 
 // Função que limpa os inputs
+function clearInput() {
+    clientNameInput.value = ''
+    productNameInput.value = ''
+    productValueInput.value = ''
+    productStatusInput.value = ''
+}
+
+// Confirmação para cancelamento de Input
 function cancelInput() {
     if (confirm('Deseja cancelar alterações?')) {
-        clientNameInput.value = ''
-        productNameInput.value = ''
-        productValueInput.value = ''
-        productStatusInput.value = ''
+        clearInput()
+        resetOptions()
+        editID = null
     }
 }
 
 //Função que le os inputs
-function getInputData() {
-    let msg = ''
+let getInputData = function () {
     clientName = clientNameInput.value
     productName = productNameInput.value
     productValue = productValueInput.value
@@ -124,19 +131,17 @@ function getInputData() {
     if (msg != '') {
         alert(msg)
     } else {
-        clientNameInput.value = ''
-        productNameInput.value = ''
-        productValueInput.value = ''
-        productStatusInput.value = ''
+        clearInput()
         productStatus == 'DELIVERED' ? sent = true : sent = false
         timeStamp = new Date().toISOString()
     }
+    msg = ''
 }
 
 //Função responsável por modificar ou adicionar itens na lista de pedidos
 function saveInput() {
+    getInputData()
     if (confirm('Deseja salvar o pedido?')) {
-        getInputData()
 
         if (editID != null) {
             newPedido = {
@@ -189,7 +194,7 @@ function deletePedido(id) {
     }
 }
 
-
+// Função responsavel por editar pedido já criado
 function editPedido(id) {
     for (i = 0; i < lPedidos.length; i++) {
         if (lPedidos[i].id == id) {
